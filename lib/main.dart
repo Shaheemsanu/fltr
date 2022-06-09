@@ -1,46 +1,82 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter/material.dart';
+
+// import 'MyHomepage.dart';
+
+// void main(List<String> args) {
+//   runApp(MyApp());
+// }
+// class MyApp extends StatelessWidget{
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(primarySwatch:Colors.orange),
+//       home:MyHomePage() ,
+//     )  ;
+//   }
+
+// }
+
+
 import 'package:flutter/material.dart';
 
+import 'splshsrn.dart';
+
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(FstApp());
 }
-class MyApp extends StatelessWidget{
+
+class FstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch:Colors.orange),
-      home:MyHomePage() ,
-    )  ;
-  }
+      home: SplashScn(),
 
-}
-
-class MyHomePage extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading:
-        
-        CircleAvatar(
-          child: Image.network("https://media-exp1.licdn.com/dms/image/C4E03AQEuWB6sfYFj_A/profile-displayphoto-shrink_800_800/0/1645875959385?e=1660176000&v=beta&t=OgMr0o-HmKDQErhlq2YV3OYd2_yTkq0cTgPFTk2j_cA")
-          ),
-
-        title: const Text(
-          "MyfirstApp",
-          style: TextStyle(fontSize: 23,color: Colors.blue),
-        ),
-            ),
-        // body: Center(
-        //   child: Container(
-        //     color: Colors.black,
-        //     width: 300,
-        //     height: 300,
-        //     child: Image.network("https://media-exp1.licdn.com/dms/image/C4E03AQEuWB6sfYFj_A/profile-displayphoto-shrink_800_800/0/1645875959385?e=1660176000&v=beta&t=OgMr0o-HmKDQErhlq2YV3OYd2_yTkq0cTgPFTk2j_cA"),
-        //   ),
-        // ),
     );
-  }
   
+  }
+// }
+// class Scn extends StatelessWidget {
+//   const Scn({ Key? key }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(),
+//       body: Center(
+//         child: Column(mainAxisAlignment: MainAxisAlignment.center,
+//           children: 
+//             [const Text(
+//               "Asif",
+//               style: TextStyle(backgroundColor: Colors.yellow),
+//             ),
+//             ElevatedButton(onPressed: (){
+//               Navigator.push(context,MaterialPageRoute(builder: (context)=>scn2()) );
+//             }, child: const Text("next"))
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+// class scn2 extends StatelessWidget {
+//   const scn2({ Key? key }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//        body: Center(
+//          child: Column(mainAxisAlignment: MainAxisAlignment.center,
+//           children:[ 
+//           ElevatedButton(onPressed: (){Navigator.of(context).pop();
+
+//           }, child: Image.asset("assets/target.png",width: 200,height: 200,
+//           ))
+//   ]),
+//        ),
+//     );
+//   }
 }
