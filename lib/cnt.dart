@@ -1,13 +1,11 @@
-import 'dart:ffi';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp( Lst());
+  runApp( const Lst());
 }
 class Lst extends StatelessWidget {
-   Lst({ Key? key }) : super(key: key);
+   const Lst({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,45 +13,45 @@ class Lst extends StatelessWidget {
       home: Scaffold(
        
         appBar: AppBar(
-          leading: Icon(Icons.contacts),
-          title:  Text("CONTACTS"),
+          leading: const Icon(Icons.contacts),
+          title:  const Text("CONTACTS"),
           ),
-          backgroundColor:  Color.fromARGB(255, 234, 236, 230),
+          backgroundColor:  const Color.fromARGB(255, 234, 236, 230),
           body: 
            
              Padding(
                padding: const EdgeInsets.all(5.0),
                child: Container(
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(3.0),color: Color.fromARGB(255, 255, 255, 255)),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(3.0),color: const Color.fromARGB(255, 255, 255, 255)),
                 child: ListView(
                   children:  
                     [
                      Card(
                 shape: RoundedRectangleBorder(
-                  side: BorderSide(
+                  side: const BorderSide(
                     color: Colors.black26
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child:  ListTile(
-                  leading: Icon(Icons.search),
+                  leading: const Icon(Icons.search),
                   trailing:
-                  Wrap(children: [
+                  Wrap(children: const [
                     Icon(Icons.mic_none_sharp),
                     Icon(Icons.more_vert_rounded)
                   ],),
                    
                   title:
-                  Text('Search contacts',style:TextStyle(color: Color.fromARGB(255, 134, 136, 138)) ),
+                  const Text('Search contacts',style:TextStyle(color: Color.fromARGB(255, 134, 136, 138)) ),
                 ),
             ),
                     
-                    ListTile(leading: Text("A"),
+                    const ListTile(leading: Text("A"),
                     tileColor:Colors.white
                     ),
-                     Divider(height: 2,thickness: 1),
+                     const Divider(height: 2,thickness: 1),
                    
-                     ListTile(title: Text("ASIF K P"),
+                     const ListTile(title: Text("ASIF K P"),
                     tileColor:Colors.white,
                     leading:
                     
@@ -64,8 +62,8 @@ class Lst extends StatelessWidget {
                     subtitle: Text("data"),
                     trailing:Icon(Icons.call),
                     ),
-                    Divider(height: 2,thickness: 1.2),
-                     ListTile(title: Text("ASIF K P"),
+                    const Divider(height: 2,thickness: 1.2),
+                     const ListTile(title: Text("ASIF K P"),
                     tileColor:Colors.white,
                     leading:
                     
@@ -76,7 +74,7 @@ class Lst extends StatelessWidget {
                     subtitle: Text("data"),
                     trailing:Icon(Icons.call),
                     ),
-                    Divider(height: 2,thickness: 1)
+                    const Divider(height: 2,thickness: 1)
                   ],
                 ),
             ),
