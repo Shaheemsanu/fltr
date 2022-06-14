@@ -113,7 +113,7 @@ class regtn extends StatelessWidget {
                                   label: Text('Confirm Password'),                                
                                 ),
                      validator: (text){
-                if(text==passwd){
+                if(text==passwd || text==null || text.isEmpty){
                   return "password are not matching ";
                 }
                 return null;
