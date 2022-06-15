@@ -19,6 +19,10 @@ class LoginPage extends StatelessWidget {
           width: 400,
           height: 400,
           decoration: BoxDecoration(
+            image: const DecorationImage(
+              image:NetworkImage("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg"),
+              fit:BoxFit.fill  
+            ),
             border: Border.all(
               color: Colors.grey,
               width: 2
@@ -77,7 +81,7 @@ class LoginPage extends StatelessWidget {
                   
               Center(
                 child: ElevatedButton(
-                 child: const Text('Login'),
+                 child:  const Text('Login'),
                   onPressed: () {  },
                  
                 ),
