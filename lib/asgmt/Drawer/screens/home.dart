@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/asgmt/Drawer.dart/screens/images.dart';
-import 'package:flutter_application_1/asgmt/Drawer.dart/screens/othpg.dart';
+
+import 'package:flutter_application_1/asgmt/Drawer/screens/images.dart';
+import 'package:flutter_application_1/asgmt/Drawer/screens/othpg.dart';
 
 class dwr extends StatefulWidget {
   const dwr({Key? key}) : super(key: key);
