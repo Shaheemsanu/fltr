@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MaterialApp(
     home: LoginPage(),
   ));
 }
+
 class LoginPage extends StatelessWidget {
-  const LoginPage({ Key? key }) : super(key: key);
-  
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,29 +21,24 @@ class LoginPage extends StatelessWidget {
           width: 400,
           height: 400,
           decoration: BoxDecoration(
-            image: const DecorationImage(
-              image:NetworkImage("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg"),
-              fit:BoxFit.fill  
-            ),
-            border: Border.all(
-              color: Colors.grey,
-              width: 2
-            ),
-           borderRadius: BorderRadius.circular(10)
-          ) ,
+              image: const DecorationImage(
+                  image: NetworkImage(
+                      "https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg"),
+                  fit: BoxFit.fill),
+              border: Border.all(color: Colors.grey, width: 2),
+              borderRadius: BorderRadius.circular(10)),
           child: Column(
             children: [
-               const Padding(
-                 padding: EdgeInsets.all(8.0),
-                 child: Text(
-                   "Login",
-                   style: TextStyle(
-                       fontSize: 20,
-                       color: Colors.black,
-                       fontWeight: FontWeight.bold),
-                 ),
-               ),
-                       
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: Column(
@@ -49,41 +46,34 @@ class LoginPage extends StatelessWidget {
                     TextField(
                       autofocus: true,
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),                              
-                          ),
-                          hintText: 'enter username',
-                          labelText: 'UserName',
-                        
-                          ),
-                      
-
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        hintText: 'enter username',
+                        labelText: 'UserName',
+                      ),
                     ),
-                    SizedBox(height: 10,),
-                     TextField(
-                             
-                              obscureText: true,
-                              obscuringCharacter: '*',
-                              decoration: InputDecoration(
-                                
-                                label: Text('Password'),
-                                isDense: true,
-                                border: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                              ),
-                            ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      obscureText: true,
+                      obscuringCharacter: '*',
+                      decoration: InputDecoration(
+                        label: Text('Password'),
+                        isDense: true,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
-                  
               Center(
                 child: ElevatedButton(
-                 child:  const Text('Login'),
-                  onPressed: () {  },
-                 
+                  child: const Text('Login'),
+                  onPressed: () {},
                 ),
               )
             ],
