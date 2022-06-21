@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(const Lst());
+  runApp(const Lstv());
 }
-class Lst extends StatelessWidget {
-  const Lst({ Key? key }) : super(key: key);
+class Lstv extends StatelessWidget {
+  const Lstv({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
