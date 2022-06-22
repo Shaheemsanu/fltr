@@ -1,22 +1,24 @@
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-void main(List<String> args) {
-  runApp(MaterialApp(
+void main() {
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: MyStaggeredGridViewScreen(),
+    home: strdgrdvw(),
   ));
 }
 
-class MyStaggeredGridViewScreen extends StatefulWidget {
+class strdgrdvw extends StatefulWidget {
+  const strdgrdvw({Key? key}) : super(key: key);
+
   @override
-  _MyStaggeredGridViewScreenState createState() =>
-      _MyStaggeredGridViewScreenState();
+  State<strdgrdvw> createState() => _strdgrdvwState();
 }
 
-class _MyStaggeredGridViewScreenState extends State<MyStaggeredGridViewScreen> {
+class _strdgrdvwState extends State<strdgrdvw> {
   List<String> listImages = [
     "https://images.pexels.com/photos/4221068/pexels-photo-4221068.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
     "https://images.pexels.com/photos/11491782/pexels-photo-11491782.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
@@ -39,11 +41,10 @@ class _MyStaggeredGridViewScreenState extends State<MyStaggeredGridViewScreen> {
     "https://images.pexels.com/photos/12333179/pexels-photo-12333179.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
     "https://images.pexels.com/photos/11991865/pexels-photo-11991865.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Staggered GridView Sample')),
+      appBar: AppBar(title: const Text('Staggered GridView')),
       body: Container(
         margin: const EdgeInsets.all(12),
         child: StaggeredGridView.countBuilder(
@@ -54,6 +55,7 @@ class _MyStaggeredGridViewScreenState extends State<MyStaggeredGridViewScreen> {
             crossAxisCount: 3,
             itemCount: listImages.length,
             itemBuilder: (context, index) {
+              final names = WordPair.random();
               return Padding(
                 padding: const EdgeInsets.all(1.0),
                 child: Container(
@@ -83,7 +85,7 @@ class _MyStaggeredGridViewScreenState extends State<MyStaggeredGridViewScreen> {
                         Padding(
                           padding: const EdgeInsets.only(left: 15, top: 10),
                           child: Text(
-                            "data",
+                            names.asCamelCase,
                             style: TextStyle(color: Colors.green[600]),
                           ),
                         ),

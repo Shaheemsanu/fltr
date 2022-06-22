@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:random_date/random_date.dart';
 
 class MyCustomGridView extends StatelessWidget {
   MyCustomGridView({Key? key}) : super(key: key);
@@ -49,9 +53,9 @@ class MyCustomGridView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           'Gallery',
-          // style: GoogleFonts.aladin(fontSize: 25, color: Colors.black),
+          style: GoogleFonts.aladin(fontSize: 25, color: Colors.black),
         ),
         elevation: 0,
         leading: const Padding(
@@ -59,6 +63,7 @@ class MyCustomGridView extends StatelessWidget {
           child: Icon(
             Icons.arrow_back_ios,
             size: 20,
+            color: Colors.black,
           ),
         ),
         leadingWidth: 20,
@@ -110,15 +115,15 @@ class MyCustomGridView extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 20),
-                    child: Text("date"
-                        // RandomDate.withStartYear(2010).random().toString(),
-                        // style: const TextStyle(
-                        //   color: Colors.grey,
-                        // ),
-                        // maxLines: 1,
-                        ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Text(
+                      RandomDate.withStartYear(2010).random().toString(),
+                      style: const TextStyle(
+                        color: Colors.grey,
+                      ),
+                      maxLines: 1,
+                    ),
                   ),
                   Padding(
                     padding:
