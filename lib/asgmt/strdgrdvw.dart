@@ -109,7 +109,8 @@ class _strdgrdvwState extends State<strdgrdvw> {
                           ),
                         )),
                       ],
-                    )),
+                    )
+                    ),
               );
             },
             staggeredTileBuilder: (index) {
